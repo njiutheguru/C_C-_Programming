@@ -1,0 +1,23 @@
+
+//division by zero file handling errors 
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+   int dividend = 20;
+   int divisor = 0;
+   int quotient;
+ 
+   if( divisor == 0){
+      fprintf(stderr, "Division by zero! Exiting...\n");
+      exit(-1);
+   }
+   
+   quotient = dividend / divisor;
+   fprintf(stderr, "Value of quotient : %d\n", quotient );//we use stderr output stream
+
+   exit(0);
+}
